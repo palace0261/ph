@@ -43,6 +43,21 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel="stylesheet" id="multi_carousel-css" href="https://bolintechnology.com/wp-content/plugins/bolin-elementor-widget-pro/assets/css/frontend/mdb/multi-carousel.min.css?ver=1.1.9" media="all">
 <style id="wp-emoji-styles-inline-css">
 
+        .bolin-scene-box{
+			background: #ccc;
+			position: relative;
+			top: 41rem !important;
+			margin: 0rem 0rem 0rem -13rem;
+			}
+                        
+        .bolin-scene-buttons button{
+                background: #ccc;
+                font-size: 1rem;
+                color: #111;
+                padding: 0.5rem 1rem;
+                font-weight: bold;
+        }
+
 	img.wp-smiley, img.emoji {
 		display: inline !important;
 		border: none !important;
@@ -132,6 +147,65 @@ gtag("config", "G-BSQMP8C016");
 					}
 				}
 				@media screen and (max-height: 640px) {
+
+                                                .bolin-page-loading-overlay{
+                                                                position: fixed;
+                                                                inset: 0;
+                                                                z-index: 9999;
+                                                                display: flex;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                                background: rgba(0, 0, 0, 0.92);
+                                                                color: #fff;
+                                                                opacity: 0;
+                                                                visibility: hidden;
+                                                                pointer-events: none;
+                                                                transition: opacity 0.25s ease, visibility 0.25s ease;
+                                                        }
+
+                                                        .bolin-page-loading-overlay.is-visible{
+                                                                opacity: 1;
+                                                                visibility: visible;
+                                                                pointer-events: auto;
+                                                        }
+
+                                                        .bolin-page-loading-overlay__panel{
+                                                                display: flex;
+                                                                flex-direction: column;
+                                                                align-items: center;
+                                                                gap: 14px;
+                                                                padding: 24px 30px;
+                                                                border: 1px solid rgba(255, 255, 255, 0.15);
+                                                                border-radius: 18px;
+                                                                background: rgba(15, 15, 15, 0.88);
+                                                                backdrop-filter: blur(6px);
+                                                                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+                                                        }
+
+                                                        .bolin-page-loading-overlay__spinner{
+                                                                width: 44px;
+                                                                height: 44px;
+                                                                border-radius: 50%;
+                                                                border: 4px solid rgba(255, 255, 255, 0.2);
+                                                                border-top-color: #ffffff;
+                                                                animation: bolin-spin 0.85s linear infinite;
+                                                        }
+
+                                                        .bolin-page-loading-overlay__text{
+                                                                font-size: 1rem;
+                                                                font-weight: 700;
+                                                                letter-spacing: 0.04em;
+                                                        }
+
+                                                        body.bolin-loading{
+                                                                overflow: hidden;
+                                                        }
+
+                                                        @keyframes bolin-spin {
+                                                                to {
+                                                                        transform: rotate(360deg);
+                                                                }
+                                                        }
 					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
 					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
 						background-image: none !important;
@@ -183,7 +257,7 @@ gtag("config", "G-BSQMP8C016");
 .elementor-widget-shortcode .gtranslate_wrapper .gt_option::-webkit-scrollbar {
     width: 3px;
 }div.skiptranslate,#google_translate_element2{display:none!important}body{top:0!important}font font{background-color:transparent!important;box-shadow:none!important;position:initial!important}.gt_container-87b8q8 .gt_switcher{font-family:Arial;font-size:12pt;text-align:left;cursor:pointer;overflow:hidden;width:173px;line-height:0}.gt_container-87b8q8 .gt_switcher a{text-decoration:none;display:block;font-size:12pt;box-sizing:content-box}.gt_container-87b8q8 .gt_switcher a img{width:24px;height:24px;vertical-align:middle;display:inline;border:0;padding:0;margin:0;opacity:0.8}.gt_container-87b8q8 .gt_switcher a:hover img{opacity:1}.gt_container-87b8q8 .gt_switcher .gt_selected{background:#fff linear-gradient(180deg, #efefef 0%, #fff 70%);position:relative;z-index:9999}.gt_container-87b8q8 .gt_switcher .gt_selected a{border:1px solid #ccc;color:#666;padding:3px 5px;width:161px}.gt_container-87b8q8 .gt_switcher .gt_selected a:after{height:24px;display:inline-block;position:absolute;right:10px;width:15px;background-position:50%;background-size:11px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 285 285'><path d='M282 76.5l-14.2-14.3a9 9 0 0 0-13.1 0L142.5 174.4 30.3 62.2a9 9 0 0 0-13.2 0L3 76.5a9 9 0 0 0 0 13.1l133 133a9 9 0 0 0 13.1 0l133-133a9 9 0 0 0 0-13z' style='fill:%23666'/></svg>");background-repeat:no-repeat;content:""!important;transition:all .2s}.gt_container-87b8q8 .gt_switcher .gt_selected a.open:after{transform:rotate(-180deg)}.gt_container-87b8q8 .gt_switcher .gt_selected a:hover{background:#fff}.gt_container-87b8q8 .gt_switcher .gt_current{display:none}.gt_container-87b8q8 .gt_switcher .gt_option{position:relative;z-index:9998;border-left:1px solid #ccc;border-right:1px solid #ccc;border-top:1px solid #ccc;background-color:#eee;display:none;width:171px;max-height:198px;height:0;box-sizing:content-box;overflow-y:auto;overflow-x:hidden;transition:height 0.5s ease-in-out}.gt_container-87b8q8 .gt_switcher .gt_option a{color:#000;padding:3px 5px}.gt_container-87b8q8 .gt_switcher .gt_option a:hover{background:#fff}.gt_container-87b8q8 .gt_switcher .gt_option::-webkit-scrollbar-track{background-color:#f5f5f5}.gt_container-87b8q8 .gt_switcher .gt_option::-webkit-scrollbar{width:5px}.gt_container-87b8q8 .gt_switcher .gt_option::-webkit-scrollbar-thumb{background-color:#888}</style><script src="https://bolintechnology.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4" defer=""></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.zZZZhVqDDCw.L.W.O/am=BBA4/d=0/rs=AN8SPfoccYc_h-zeKMQux1N0I7taUB-_tA/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.ko.Z_v8N42NKvU.O/am=AAAAAQ/d=1/exm=el_conf/ed=1/rs=AN8SPfq05jiKy0u6W4AC-VRHVbakow8O5g/m=el_main"></script></head>
-<body class="wp-singular product-template product-template-elementor_theme single single-product postid-46512 wp-custom-logo wp-theme-bolintechnology theme-bolintechnology user-registration-page ur-settings-sidebar-show woocommerce woocommerce-page woocommerce-js product-kbd-plus-advanced-production-ptz-controller elementor-default elementor-kit-6 elementor-page elementor-page-46512 e--ua-blink e--ua-chrome e--ua-webkit" data-elementor-device-mode="desktop" style="position: relative; min-height: 100%; top: 0px;">
+<body class="wp-singular product-template product-template-elementor_theme single single-product postid-46512 wp-custom-logo wp-theme-bolintechnology theme-bolintechnology user-registration-page ur-settings-sidebar-show woocommerce woocommerce-page woocommerce-js product-kbd-plus-advanced-production-ptz-controller elementor-default elementor-kit-6 elementor-page elementor-page-46512 e--ua-blink e--ua-chrome e--ua-webkit" data-elementor-device-mode="desktop" style="position: relative; min-height: 100%; top: 0px; opacity:0;">
 		<header data-elementor-type="header" data-elementor-id="41" class="elementor elementor-41 elementor-location-header" data-elementor-post-type="elementor_library">
 					<header class="elementor-section elementor-top-section elementor-element elementor-element-24ff2fb2 elementor-section-content-middle bolin-sticky elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="24ff2fb2" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;none&quot;}" style="top: 0px;">
 						<div class="elementor-container elementor-column-gap-default">
@@ -811,6 +885,12 @@ From multi-camera live productions to lecture capture and broadcast control room
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-aa40240 elementor-widget elementor-widget-bolintech-scene-viewer-glb" data-id="aa40240" data-element_type="widget" data-e-type="widget" data-widget_type="bolintech-scene-viewer-glb.default">
 				<div class="elementor-widget-container">
+                                                                    <div class="bolin-page-loading-overlay is-visible" id="bolin-page-loading-overlay" aria-live="polite" aria-busy="true">
+                                                                        <div class="bolin-page-loading-overlay__panel">
+                                                                                <div class="bolin-page-loading-overlay__spinner"></div>
+                                                                                <div class="bolin-page-loading-overlay__text">로딩중...</div>
+                                                                        </div>
+                                                                    </div>
 					        <div class="bolin-scene-wrapper bolin-scene-wrapper--below loaded hide">
                         <button type="button" class="btn btn-close" onclick="return window.bolinCloseScene ? window.bolinCloseScene() : false;">
                 Close<i class="fal fa-times"></i>
@@ -821,86 +901,93 @@ From multi-camera live productions to lecture capture and broadcast control room
                 <div class="bolin-scene-loading" style="display: none;">
                     <div class="bolin-scene-spinner"></div>
                 </div>
-
+<!-- 한글 -->
                                     <div class="bolin-scene-box elementor-repeater-item-2a6d708 is-visible" data-target-label="Top">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
-                                                    <div class="bolin-scene-box__title">Touchscreen Display</div>
-                                                                            <div class="bolin-scene-box__desc">The responsive 4″ touchscreen provides quick access to camera control, live view, and system settings, while allowing operators to monitor multiple camera feeds in a multiview layout.</div>
+                                                    <div class="bolin-scene-box__title">터치 스크린 화면</div>
+                                                                            <div class="bolin-scene-box__desc">반응형 4인치 터치스크린은 카메라 제어, 실시간 보기, 시스템 설정에 빠르게 접근할 수 있으며, 멀티뷰 레이아웃에서 여러 대의 카메라 피드를 모니터링할 수 있도록 지원합니다.</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-940c30e is-visible" data-target-label="Top">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
-                                                    <div class="bolin-scene-box__title">4-Channel Video Decoding</div>
-                                                                            <div class="bolin-scene-box__desc">Decode up to four IP video streams simultaneously with low latency . This allows operators to view camera feeds while controlling PTZ movement and system functions.</div>
+                                                    <div class="bolin-scene-box__title">
+                                                        4채널 비디오 디코딩
+                                                </div>
+                                                                            <div class="bolin-scene-box__desc">낮은 지연 시간으로 최대 4개의 IP 비디오 스트림을 동시에 디코딩합니다. 이를 통해 운영자님은 PTZ의 움직임과 시스템 기능을 제어하시면서 동시에 카메라 피드를 확인하실 수 있습니다.
+</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-9e51150 is-visible" data-target-label="Top">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
-                                                    <div class="bolin-scene-box__title">AI Tracking</div>
-                                                                            <div class="bolin-scene-box__desc">Built-in AI tracking allows the controller to automatically follow subjects by sending control commands to the camera. This enables tracking functionality even for cameras that do not have AI tracking built in. To be released in a future firmware update.</div>
+                                                    <div class="bolin-scene-box__title">AI 추적
+</div>
+                                                                            <div class="bolin-scene-box__desc">내장된 AI 추적 기능으로 컨트롤러는 카메라에 제어 명령을 전송하여 피사체를 자동으로 추적할 수 있습니다. 이 기능은 AI 추적 기능이 내장되어 있지 않은 카메라에서도 추적 기능을 사용할 수 있게 해줍니다. 향후 펌웨어 업데이트를 통해 공개될 예정입니다.
+</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-0237a1e is-visible" data-target-label="Top">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
-                                                    <div class="bolin-scene-box__title">Supported Control Protocols</div>
-                                                                            <div class="bolin-scene-box__desc">A custom designed precision joystick provides smooth, responsive control for accurate camera movement and positioning, allowing operators to make refined adjustments during live production.</div>
+                                                    <div class="bolin-scene-box__title">지원하는 제어 프로토콜
+</div>
+                                                                            <div class="bolin-scene-box__desc">맞춤형 정밀 조이스틱은 정확한 카메라 움직임과 위치 설정을 위한 부드럽고 반응이 빠른 제어를 제공하며, 운영자가 실시간으로 정교한 조정을 할 수 있도록 도와줍니다.
+</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-865af27" data-target-label="Joystick">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
-                                                    <div class="bolin-scene-box__title">Precision Control Joystick</div>
-                                                                            <div class="bolin-scene-box__desc">A custom designed precision joystick provides smooth, responsive control for accurate camera movement and positioning, allowing operators to make refined adjustments during live production.</div>
+                                                    <div class="bolin-scene-box__title">정밀 제어 조이스틱</div>
+                                                                            <div class="bolin-scene-box__desc">맞춤형 정밀 조이스틱은 정확한 카메라 움직임과 위치 설정을 위한 부드럽고 반응이 빠른 제어를 제공하며, 운영자가 실시간으로 정교한 조정을 할 수 있도록 도와줍니다.</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-811be29" data-target-label="Joystick">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
-                                                    <div class="bolin-scene-box__title">Roll Axis Control</div>
-                                                                            <div class="bolin-scene-box__desc">Dedicated roll-axis control allows compatible Bolin cameras to rotate the image module for horizon correction, vertical video, or creative camera angles directly from the controller.</div>
+                                                    <div class="bolin-scene-box__title">롤 축 제어</div>
+                                                                            <div class="bolin-scene-box__desc">전용 롤축 제어를 통해 호환되는 볼린 카메라는 컨트롤러에서 직접 이미지 모듈을 회전시켜 수평 보정, 수직 비디오, 또는 창의적인 카메라 앵글을 조정할 수 있습니다.</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-60c6023" data-target-label="Image and Lens Controls">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
-                                                    <div class="bolin-scene-box__title">Image Adjustments</div>
-                                                                            <div class="bolin-scene-box__desc">Dedicated dials provide direct control of key image parameters such as white balance and exposure, allowing operators to quickly fine-tune the camera’s image without navigating menus.</div>
+                                                    <div class="bolin-scene-box__title">이미지 조정</div>
+                                                                            <div class="bolin-scene-box__desc">전용 다이얼은 화이트 밸런스와 노출과 같은 주요 이미지 파라미터를 직접 제어할 수 있도록 하여, 운영자가 메뉴를 탐색하지 않고도 카메라의 이미지를 빠르게 미세 조정할 수 있도록 합니다.</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-48e5b66" data-target-label="Image and Lens Controls">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
-                                                    <div class="bolin-scene-box__title">Zoom Rocker</div>
-                                                                            <div class="bolin-scene-box__desc">The zoom rocker on the left side allows operators to adjust zoom while controlling camera movement with the joystick, enabling intuitive dual-hand operation during live production.</div>
+                                                    <div class="bolin-scene-box__title">줌 로커</div>
+                                                                            <div class="bolin-scene-box__desc">왼쪽에 있는 줌 로커를 통해 조종사님은 조이스틱으로 카메라 움직임을 제어하시면서 줌을 조절하실 수 있으며, 이를 통해 실시간 제작 중에도 직관적인 양손 조작이 가능합니다.</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-159dea6" data-target-label="Image and Lens Controls">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
-                                                    <div class="bolin-scene-box__title">Focus Dial</div>
-                                                                            <div class="bolin-scene-box__desc">Dedicated roll-axis control allows compatible Bolin cameras to rotate the image module for horizon correction, vertical video, or creative camera angles directly from the controller.</div>
+                                                    <div class="bolin-scene-box__title">포커스 다이얼</div>
+                                                                            <div class="bolin-scene-box__desc">전용 롤축 제어를 통해 호환되는 볼린 카메라는 컨트롤러에서 직접 이미지 모듈을 회전시켜 수평 보정, 수직 비디오, 또는 창의적인 카메라 앵글을 조정할 수 있습니다.</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-e7a720c" data-target-label="Front">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
-                                                    <div class="bolin-scene-box__title">User-Definable Buttons</div>
-                                                                            <div class="bolin-scene-box__desc">Assignable buttons and knobs allow operators to map commonly used functions for faster control and personalized workflows.</div>
+                                                    <div class="bolin-scene-box__title">사용자 정의 버튼</div>
+                                                                            <div class="bolin-scene-box__desc">할당 가능한 버튼과 노브를 통해 작업자는 자주 사용하는 기능을 빠르게 제어하고 개인화된 워크플로우를 설정할 수 있습니다.</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-2dccc86" data-target-label="Front">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
-                                                    <div class="bolin-scene-box__title">+ Panel</div>
-                                                                            <div class="bolin-scene-box__desc">The + Panel opens an on-screen control panel with additional customizable buttons and functions, providing powerful flexibility to expand control and adapt the controller to specific workflows.</div>
+                                                    <div class="bolin-scene-box__title">+ 패널</div>
+                                                                            <div class="bolin-scene-box__desc">+ 패널은 추가적인 사용자 지정 버튼과 기능을 갖춘 화면 제어판을 열어주며, 이를 통해 제어 기능을 확장하고 특정 워크플로우에 맞게 컨트롤러를 조정할 수 있는 강력한 유연성을 제공합니다.</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-5f3c9dd" data-target-label="Front">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
                                                     <div class="bolin-scene-box__title">Number/Direct Call</div>
-                                                                            <div class="bolin-scene-box__desc">Recall cameras or presets instantly using keypad direct call or number entry followed by the call command.</div>
+                                                                            <div class="bolin-scene-box__desc">키패드 다이렉트 콜이나 번호 입력 후 호출 명령을 사용하여 카메라 또는 프리셋을 즉시 불러오실 수 있습니다.</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-f80e4e8" data-target-label="Rear">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
                                                     <div class="bolin-scene-box__title">Video Output</div>
-                                                                            <div class="bolin-scene-box__desc">HDMI output allows decoded video to be displayed on external monitors in single-view or multiview layouts, while USB-C with UVC support enables the controller to function as a plug-and-play webcam for computers and software applications.</div>
+                                                                            <div class="bolin-scene-box__desc">HDMI 출력을 통해 디코딩된 비디오를 외부 모니터에 싱글 뷰 또는 멀티 뷰 레이아웃으로 표시할 수 있으며, USB-C와 UVC를 지원하면 컨트롤러가 컴퓨터와 소프트웨어 애플리케이션에서 플러그 앤 플레이 웹캠으로 작동할 수 있습니다.</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-2c0c087" data-target-label="Rear">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
-                                                    <div class="bolin-scene-box__title">Control &amp; Network Connections</div>
-                                                                            <div class="bolin-scene-box__desc">Dedicated ports support RS-422 and RS-232 serial control, LAN with PoE+ for network connectivity and power, and Tally/GPIO interfaces for integration with external production systems.</div>
+                                                    <div class="bolin-scene-box__title">제어 및 네트워크 연결</div>
+                                                                            <div class="bolin-scene-box__desc">전용 포트는 RS-422와 RS-232 시리얼 제어를 지원하며, 네트워크 연결과 전원을 위한 PoE+를 지원하는 LAN, 그리고 외부 생산 시스템과의 연동을 위한 Tally/GPIO 인터페이스를 제공합니다.</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-cb04e0f" data-target-label="Rear">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
-                                                    <div class="bolin-scene-box__title">Headphone Jack</div>
-                                                                            <div class="bolin-scene-box__desc">The headphone jack allows operators to monitor audio directly from the controller during live production.</div>
+                                                    <div class="bolin-scene-box__title">헤드폰 잭</div>
+                                                                            <div class="bolin-scene-box__desc">헤드폰 잭을 통해 운영자님들은 실시간으로 컨트롤러에서 나오는 오디오를 직접 모니터링하실 수 있습니다.</div>
                                             </div>
                                     <div class="bolin-scene-box elementor-repeater-item-05b1f76" data-target-label="Rear">
                         <button type="button" class="bolin-scene-box__close" aria-label="Close">✕</button>
                                                     <div class="bolin-scene-box__title">Security Slot</div>
-                                                                            <div class="bolin-scene-box__desc">A security slot allows the controller to be secured with a compatible lock to help prevent theft in shared or public environments.</div>
+                                                                            <div class="bolin-scene-box__desc">보안 슬롯을 통해 호환되는 잠금 장치로 컨트롤러를 고정하여 공유 환경이나 공공 장소에서 도난을 방지할 수 있습니다.</div>
                                             </div>
                 
             <canvas touch-action="none" style="width: 100%; height: 100%; display: block; outline: none; touch-action: none; -webkit-tap-highlight-color: transparent;" width="1905" height="936" data-engine="Babylon.js v9.4.1" tabindex="1"></canvas></div><!-- /.bolin-scene-viewer-glb -->
@@ -930,7 +1017,7 @@ From multi-camera live productions to lecture capture and broadcast control room
 						<div class="elementor-element elementor-element-ae16478 elementor-widget__width-auto elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-id="ae16478" data-element_type="widget" data-e-type="widget" data-target="bolin-scene-wrapper" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 									<div class="elementor-button-wrapper">
-                                            <a class="elementor-button elementor-size-sm" role="button" id="3d-model-switcher" href="#" onclick="return window.bolinOpenScene ? window.bolinOpenScene() : false;">
+                                                                    <a class="elementor-button elementor-size-sm" role="button" id="3d-model-switcher" href="#" onclick="return window.bolinOpenScene ? window.bolinOpenScene() : false;">
 						<span class="elementor-button-content-wrapper">
 									<span class="elementor-button-text"> Explore in 3D</span>
 					</span>
@@ -1932,6 +2019,7 @@ ALL RIGHTS RESERVED</p>				</div>
                         (function () {
                                 var localViewerState = {
                                         initialized: false,
+                                                loadPromise: null,
                                         pendingViewIndex: null,
                                         activeViewIndex: 0,
                                         cameraReady: false,
@@ -1942,6 +2030,22 @@ ALL RIGHTS RESERVED</p>				</div>
                                         scene: null,
                                         canvas: null
                                 };
+
+                                        function showPageLoadingOverlay() {
+                                                var overlay = document.getElementById('bolin-page-loading-overlay');
+                                                if (overlay) {
+                                                        overlay.classList.add('is-visible');
+                                                }
+                                                document.body.classList.add('bolin-loading');
+                                        }
+
+                                        function hidePageLoadingOverlay() {
+                                                var overlay = document.getElementById('bolin-page-loading-overlay');
+                                                if (overlay) {
+                                                        overlay.classList.remove('is-visible');
+                                                }
+                                                document.body.classList.remove('bolin-loading');
+                                        }
 
                                 function getSceneWrapper() {
                                         return document.querySelector('.bolin-scene-wrapper');
@@ -1996,8 +2100,16 @@ ALL RIGHTS RESERVED</p>				</div>
                                 function ensureLocalViewer() {
                                         var host = document.querySelector('.bolin-scene-viewer-glb');
 
-                                        if (!host || !window.BABYLON || localViewerState.initialized) {
-                                                return;
+                                        if (!host || !window.BABYLON) {
+                                                return Promise.resolve();
+                                        }
+
+                                        if (localViewerState.loadPromise) {
+                                                return localViewerState.loadPromise;
+                                        }
+
+                                        if (localViewerState.initialized) {
+                                                return Promise.resolve();
                                         }
 
                                         var canvas = document.getElementById('bolin-local-scene-canvas');
@@ -2222,22 +2334,28 @@ ALL RIGHTS RESERVED</p>				</div>
                                         lightB.position = new BABYLON.Vector3(3, 6, 3);
                                         lightB.intensity = 1.0;
 
-                                        BABYLON.SceneLoader.ImportMeshAsync('', 'assets/models/', 'keyboard-8.glb', scene).then(function () {
-                                                fitCameraToScene(camera, scene);
+                                                localViewerState.loadPromise = BABYLON.SceneLoader.ImportMeshAsync('', 'assets/models/', 'keyboard-8.glb', scene).then(function () {
+                                                        fitCameraToScene(camera, scene);
 
-                                                if (localViewerState.pendingViewIndex !== null) {
-                                                        var queuedIndex = localViewerState.pendingViewIndex;
-                                                        localViewerState.pendingViewIndex = null;
-                                                        applyView(queuedIndex);
-                                                } else {
-                                                        activateButton(0);
-                                                        applyView(0);
-                                                }
+                                                        if (localViewerState.pendingViewIndex !== null) {
+                                                                var queuedIndex = localViewerState.pendingViewIndex;
+                                                                localViewerState.pendingViewIndex = null;
+                                                                applyView(queuedIndex);
+                                                        } else {
+                                                                activateButton(0);
+                                                                applyView(0);
+                                                        }
 
-                                                engine.resize();
-                                        }).catch(function (error) {
-                                                console.error('Local 3D viewer failed to load:', error);
-                                        });
+                                                        engine.resize();
+                                                }).catch(function (error) {
+                                                        console.error('Local 3D viewer failed to load:', error);
+                                                }).finally(function () {
+                                                        localViewerState.initialized = true;
+                                                        setTimeout(function () {
+                                                                hidePageLoadingOverlay();
+                                                                try { document.body.style.opacity = '1'; } catch (e) {}
+                                                        }, 250);
+                                                });
 
                                         engine.runRenderLoop(function () {
                                                 scene.render();
@@ -2251,6 +2369,8 @@ ALL RIGHTS RESERVED</p>				</div>
                                         localViewerState.engine = engine;
                                         localViewerState.scene = scene;
                                         localViewerState.canvas = canvas;
+
+                                        return localViewerState.loadPromise;
                                 }
 
                                 function revealScene() {
@@ -2268,6 +2388,7 @@ ALL RIGHTS RESERVED</p>				</div>
                                         wrapper.style.opacity = '1';
                                         wrapper.style.pointerEvents = 'auto';
                                         wrapper.style.backgroundColor = '#000';
+                                        showPageLoadingOverlay();
 
                                         var leftPanel = wrapper.querySelector('.bolin-scene-left-panel');
                                         if (leftPanel) {
@@ -2280,7 +2401,7 @@ ALL RIGHTS RESERVED</p>				</div>
                                                 buttonList.style.display = 'flex';
                                         }
 
-                                        ensureLocalViewer();
+                                                ensureLocalViewer();
 
                                         window.dispatchEvent(new Event('resize'));
                                         requestAnimationFrame(function () {
@@ -2312,6 +2433,22 @@ ALL RIGHTS RESERVED</p>				</div>
 
                                 window.bolinOpenScene = revealScene;
                                 window.bolinCloseScene = hideScene;
+
+                                showPageLoadingOverlay();
+
+                                function openSceneAfterLoad() {
+                                        setTimeout(function () {
+                                                if (window.bolinOpenScene) {
+                                                        window.bolinOpenScene();
+                                                }
+                                        }, 700);
+                                }
+
+                                if (document.readyState === 'complete') {
+                                        openSceneAfterLoad();
+                                } else {
+                                        window.addEventListener('load', openSceneAfterLoad, { once: true });
+                                }
                         }());
                         </script>
 
