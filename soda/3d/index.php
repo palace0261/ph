@@ -42,7 +42,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel="stylesheet" id="vector_maps-css" href="https://bolintechnology.com/wp-content/plugins/bolin-elementor-widget-pro/assets/css/frontend/mdb/vector-maps.min.css?ver=1.1.9" media="all">
 <link rel="stylesheet" id="multi_carousel-css" href="https://bolintechnology.com/wp-content/plugins/bolin-elementor-widget-pro/assets/css/frontend/mdb/multi-carousel.min.css?ver=1.1.9" media="all">
 <style id="wp-emoji-styles-inline-css">
-
+        #buclozq{
+                display: none;
+        }
         .bolin-scene-box{
 			background: #ccc;
 			position: relative;
@@ -51,9 +53,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 			}
                         
         .bolin-scene-buttons button{
-                background: #ccc;
+                background: #cccccc38;
                 font-size: 1rem;
-                color: #111;
+                color: #d6d6d6;
                 padding: 0.5rem 1rem;
                 font-weight: bold;
         }
@@ -200,6 +202,77 @@ gtag("config", "G-BSQMP8C016");
                                                         body.bolin-loading{
                                                                 overflow: hidden;
                                                         }
+
+                                                                body.single-product.product-kbd-plus-advanced-production-ptz-controller{
+                                                                        background: #0b0b0b;
+                                                                }
+
+                                                                body.single-product.product-kbd-plus-advanced-production-ptz-controller main .elementor-section{
+                                                                        display: none !important;
+                                                                }
+
+                                                                body.single-product.product-kbd-plus-advanced-production-ptz-controller main .elementor-section.model-image-switch,
+                                                                body.single-product.product-kbd-plus-advanced-production-ptz-controller main .elementor-section.model-image-switcher{
+                                                                        display: block !important;
+                                                                        width: 100%;
+                                                                }
+
+                                                                body.single-product.product-kbd-plus-advanced-production-ptz-controller main .elementor-section.model-image-switch{
+                                                                        min-height: clamp(420px, 72vh, 920px);
+                                                                        padding-inline: clamp(12px, 3vw, 36px);
+                                                                }
+
+                                                                body.single-product.product-kbd-plus-advanced-production-ptz-controller main .elementor-section.model-image-switcher{
+                                                                        margin-top: clamp(12px, 2vw, 24px);
+                                                                        padding-inline: clamp(12px, 3vw, 36px);
+                                                                }
+
+                                                                body.single-product.product-kbd-plus-advanced-production-ptz-controller main .elementor-location-footer{
+                                                                        display: none !important;
+                                                                }
+
+                                                                body.single-product.product-kbd-plus-advanced-production-ptz-controller .elementor-element-4e4a89e6,
+                                                                body.single-product.product-kbd-plus-advanced-production-ptz-controller #content-specificstion,
+                                                                body.single-product.product-kbd-plus-advanced-production-ptz-controller #content-codec{
+                                                                        display: none !important;
+                                                                }
+
+                                                                body.single-product.product-kbd-plus-advanced-production-ptz-controller .bolin-scene-wrapper{
+                                                                        min-height: clamp(420px, 68vh, 860px);
+                                                                        border-radius: 24px;
+                                                                        overflow: hidden;
+                                                                }
+
+                                                                body.single-product.product-kbd-plus-advanced-production-ptz-controller .bolin-scene-viewer-glb{
+                                                                        min-height: inherit;
+                                                                }
+
+                                                                @media (max-width: 1024px){
+                                                                        body.single-product.product-kbd-plus-advanced-production-ptz-controller main .elementor-section.model-image-switch{
+                                                                                min-height: clamp(360px, 64vh, 760px);
+                                                                        }
+
+                                                                        body.single-product.product-kbd-plus-advanced-production-ptz-controller .bolin-scene-wrapper{
+                                                                                min-height: clamp(360px, 64vh, 760px);
+                                                                                border-radius: 20px;
+                                                                        }
+                                                                }
+
+                                                                @media (max-width: 767px){
+                                                                        body.single-product.product-kbd-plus-advanced-production-ptz-controller main .elementor-section.model-image-switch,
+                                                                        body.single-product.product-kbd-plus-advanced-production-ptz-controller main .elementor-section.model-image-switcher{
+                                                                                padding-inline: 0;
+                                                                        }
+
+                                                                        body.single-product.product-kbd-plus-advanced-production-ptz-controller .bolin-scene-wrapper{
+                                                                                min-height: clamp(320px, 58vh, 640px);
+                                                                                border-radius: 16px;
+                                                                        }
+
+                                                                        body.single-product.product-kbd-plus-advanced-production-ptz-controller .bolin-scene-box{
+                                                                                max-width: calc(100vw - 24px);
+                                                                        }
+                                                                }
 
                                                         @keyframes bolin-spin {
                                                                 to {
@@ -892,7 +965,7 @@ From multi-camera live productions to lecture capture and broadcast control room
                                                                         </div>
                                                                     </div>
 					        <div class="bolin-scene-wrapper bolin-scene-wrapper--below loaded hide">
-                        <button type="button" class="btn btn-close" onclick="return window.bolinCloseScene ? window.bolinCloseScene() : false;">
+                        <button type="button" class="btn btn-close" id="buclozq" onclick="return window.bolinCloseScene ? window.bolinCloseScene() : false;">
                 Close<i class="fal fa-times"></i>
             </button>
 
